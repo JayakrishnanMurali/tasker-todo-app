@@ -28,6 +28,39 @@ const Todo = () => {
     overlay.style.pointerEvents = "none";
   };
 
+  const changeBgColorofPlus = () => {
+    var plusButton = document.getElementById("plusButton");
+    plusButton.classList.add("addtask_plus");
+  };
+  const revertBgColorofPlus = () => {
+    var plusButton = document.getElementById("plusButton");
+    plusButton.classList.remove("addtask_plus");
+  };
+
+  const loadTodoPopupToHome = () => {
+    var todoPopup = document.getElementById("add-todo-popup");
+    var addTaskButton = document.getElementById("addTaskButton");
+    var cancelButton = document.getElementById("add-todo-btnCancel");
+
+    // var divChild = document.getElementById("test");
+
+    // todoPopup.appendChild(divChild);
+
+    todoPopup.style = `
+    transform: scale(1);
+    width: 38.5rem;
+    top: 12.5rem;
+    left: 31rem;
+
+    `;
+
+    addTaskButton.style.display = "none";
+
+    cancelButton.addEventListener("click", () => {
+      addTaskButton.style.display = "initial";
+    });
+  };
+
   return (
     <div className="todo">
       <div className="todo__header">
@@ -41,7 +74,6 @@ const Todo = () => {
               <ArrowForward className="arrowIcon" />
             </div>
           </div>
-          {/*  */}
         </div>
         <button
           className="svg__todo-btn"
@@ -71,7 +103,7 @@ const Todo = () => {
         <input
           type="text"
           className="mainInput"
-          placeholder="Add your tasks here..."
+          placeholder="Add your task here..."
         />
         <input type="text" className="descInput" placeholder="Description" />
         <div className="popup__btn">
@@ -86,6 +118,39 @@ const Todo = () => {
         </div>
       </div>
       <div id="overlay" onClick={closePopupbyClickingOutisde}></div>
+
+      <div className="todo__tasks">
+        <div className="todo__addTasks">
+          <button
+            onMouseOver={changeBgColorofPlus}
+            onMouseOut={revertBgColorofPlus}
+            onClick={loadTodoPopupToHome}
+            id="addTaskButton"
+          >
+            <span id="plusButton">+</span> Add Task
+          </button>
+        </div>
+      </div>
+
+      <div className="todo__popup" id="add-todo-popup">
+        <input
+          type="text"
+          className="mainInput"
+          placeholder="Add your task here..."
+        />
+        <input type="text" className="descInput" placeholder="Description" />
+        <div className="popup__btn">
+          <button className="popup__addBtn">Add task</button>
+          <button
+            className="popup__cancelBtn"
+            id="add-todo-btnCancel"
+            onClick={closeTodoPopup}
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+      {/* <div className="test" id="test"></div> */}
     </div>
   );
 };

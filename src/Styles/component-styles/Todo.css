@@ -153,3 +153,31 @@
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
+
+.todo__addTasks {
+  display: block;
+}
+.todo__addTasks > button {
+  width: 100%;
+  text-align: left;
+  padding: 0.7rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--gray-color);
+}
+.todo__addTasks > button:hover {
+  color: var(--accent-color);
+}
+
+.addtask_plus {
+  background: var(--accent-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  padding: 0 5px;
+}
+/* 
+#test {
+  display: flex;
+} */
