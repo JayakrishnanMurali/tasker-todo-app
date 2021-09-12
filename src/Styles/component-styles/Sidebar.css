@@ -1,7 +1,7 @@
 .sidebar {
-  flex: 0.3;
-  height: 100vh;
-  padding: 4rem;
+  flex: 0.25;
+  max-height: 100vh;
+  padding: 0 4rem 4rem 4rem;
   overflow-y: hidden;
 }
 
@@ -45,6 +45,7 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  color: var(--white-color);
 }
 .sidebar__wp-boxContainer {
   background: var(--white-color);
@@ -103,12 +104,12 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 1.5rem;
-  padding: 1.5rem;
+  padding: 1.4rem;
   cursor: pointer;
 }
 
 .sidebar__AddNewPin > button {
-  width: 40px;
+  width: 60px;
   height: 40px;
   background: var(--accent-color);
   text-align: center;
@@ -118,12 +119,13 @@
   outline: none;
   font-size: 1.5rem;
   transition: all 0.2s ease-in-out;
+  color: var(--white-color);
 }
 
 .sidebar__AddNewPin > button:hover {
   background: var(--secondary-accent-color);
 }
 .sidebar__AddNewPin > h2 {
-  font-size: 1.2rem;
-  margin-right: 1.2rem;
+  font-size: 1rem;
+  margin-left: 0.2rem;
 }
