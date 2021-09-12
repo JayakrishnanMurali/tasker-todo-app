@@ -3,13 +3,29 @@ import React from "react";
 import "../../Styles/component-styles/Todo.css";
 
 const Todo = () => {
+  const closePopupbyClickingOutisde = () => {
+    var todoPopup = document.getElementById("add-todo-popup");
+    var overlay = document.getElementById("overlay");
+    todoPopup.style.transform = "translate(-50%, -50%) scale(0)";
+    overlay.style.opacity = "0";
+    overlay.style.pointerEvents = "none";
+  };
+
   const loadTodoPopup = () => {
     var todoPopup = document.getElementById("add-todo-popup");
-    todoPopup.style.display = "block";
+    var overlay = document.getElementById("overlay");
+
+    todoPopup.style.transform = "translate(-50%, -50%) scale(1)";
+    overlay.style.opacity = "1";
+    overlay.style.pointerEvents = "all";
   };
   const closeTodoPopup = () => {
     var todoPopup = document.getElementById("add-todo-popup");
-    todoPopup.style.display = "none";
+    var overlay = document.getElementById("overlay");
+
+    todoPopup.style.transform = "translate(-50%, -50%) scale(0)";
+    overlay.style.opacity = "0";
+    overlay.style.pointerEvents = "none";
   };
 
   return (
@@ -55,7 +71,7 @@ const Todo = () => {
         <input
           type="text"
           className="mainInput"
-          placeholder="eg., Renew gyym every May 1st #Health"
+          placeholder="Add your tasks here..."
         />
         <input type="text" className="descInput" placeholder="Description" />
         <div className="popup__btn">
@@ -69,6 +85,7 @@ const Todo = () => {
           </button>
         </div>
       </div>
+      <div id="overlay" onClick={closePopupbyClickingOutisde}></div>
     </div>
   );
 };

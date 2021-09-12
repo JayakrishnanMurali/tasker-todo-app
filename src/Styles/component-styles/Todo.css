@@ -55,6 +55,7 @@
   position: relative;
   transition: all 0.2s ease-in-out;
   transition-delay: 0.1s;
+  cursor: pointer;
 }
 
 .svg__todo-btn > h1 {
@@ -73,12 +74,14 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
   display: flex;
   flex-direction: column;
   background: var(--white-color);
   border-radius: 1rem;
-  display: none;
+  padding-top: 1rem;
+  /* display: none; */
 }
 .todo__popup > input {
   padding: 1rem;
@@ -114,6 +117,7 @@
   outline: none;
   font-size: 0.918rem;
   font-weight: 600;
+  cursor: pointer;
 }
 .popup__addBtn {
   width: 6rem;
@@ -136,4 +140,16 @@
   height: 2rem;
   border-radius: 0.5rem;
   padding: 0.2rem;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
