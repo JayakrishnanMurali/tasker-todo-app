@@ -1,0 +1,129 @@
+.sidebar {
+  flex: 0.3;
+  height: 100vh;
+  padding: 4rem;
+  overflow-y: hidden;
+}
+
+.sidebar__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.sidebar__logo > h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.sidebar__wp-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.sidebar__wp-header-section > h2 {
+  font-size: 1.4rem;
+  color: var(--black-color);
+}
+.sidebar__wp-header-section > a {
+  color: var(--accent-color);
+  font-size: 0.818rem;
+  font-weight: 500;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-color);
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 1.2rem;
+}
+.avatar > h3 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar__wp-boxContainer {
+  background: var(--white-color);
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  border-radius: 1.7rem;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.1s;
+  cursor: pointer;
+}
+
+.sidebar__bc-heading {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar__bc-date {
+  color: var(--gray-color);
+  font-size: 0.918rem;
+  font-weight: 600;
+}
+
+.sidebar__info-tag {
+  background: var(--secondary-accent-color);
+  width: 5rem;
+  height: 1.2rem;
+  margin: 0.5rem 0;
+  color: var(--white-color);
+  font-size: 0.718rem;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.sidebar__wp-boxContainer:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 1px 33px -5px rgba(0, 0, 0, 0.13);
+}
+
+.sidebar__info-tag > h4 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar__bc-desc {
+  margin-top: 1rem;
+  font-size: 0.878rem;
+  font-weight: 400;
+  color: var(--gray-color);
+}
+
+.sidebar__AddNewPin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar__AddNewPin > button {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-color);
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 1.2rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar__AddNewPin > button:hover {
+  background: var(--secondary-accent-color);
+}
+.sidebar__AddNewPin > h2 {
+  font-size: 1.2rem;
+  margin-right: 1.2rem;
+}
