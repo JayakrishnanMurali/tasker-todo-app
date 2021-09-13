@@ -177,7 +177,10 @@
   border-radius: 50%;
   padding: 0 5px;
 }
-/* 
-#test {
-  display: flex;
-} */
+
+.modifiedPopup {
+  transform: scale(1);
+  width: 38.5rem;
+  top: 12.5rem;
+  left: 31rem;
+}

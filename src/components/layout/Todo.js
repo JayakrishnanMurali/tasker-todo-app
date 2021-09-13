@@ -41,23 +41,29 @@ const Todo = () => {
     var todoPopup = document.getElementById("add-todo-popup");
     var addTaskButton = document.getElementById("addTaskButton");
     var cancelButton = document.getElementById("add-todo-btnCancel");
-
-    // var divChild = document.getElementById("test");
-
-    // todoPopup.appendChild(divChild);
+    var disableOtherButoon = document.getElementById("add-todo-btn");
 
     todoPopup.style = `
-    transform: scale(1);
-    width: 38.5rem;
-    top: 12.5rem;
-    left: 31rem;
-
+      transform: scale(1);
+      width: 38.5rem;
+      top: 12.5rem;
+      left: 31rem;
     `;
+
+    disableOtherButoon.style.pointerEvents = "none";
 
     addTaskButton.style.display = "none";
 
     cancelButton.addEventListener("click", () => {
       addTaskButton.style.display = "initial";
+
+      todoPopup.style = `
+      transform: translate(-50%, -50%) scale(0);
+      width: 30rem;
+      top: 50%;
+      left: 50%;
+    `;
+      disableOtherButoon.style.pointerEvents = "all";
     });
   };
 
@@ -150,7 +156,6 @@ const Todo = () => {
           </button>
         </div>
       </div>
-      {/* <div className="test" id="test"></div> */}
     </div>
   );
 };
